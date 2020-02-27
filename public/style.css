@@ -1,0 +1,29 @@
+#header {
+  background-color: rgb(235, 235, 235);
+  display: flex;
+  align-items: center;
+}
+
+.webHead {
+  font-family: monospace;
+  font-stretch: 50;
+  font-weight: bolder;
+  font-size: 300%;
+  color: #665857;
+  text-align: right;
+  padding-right: 40px;
+  flex-basis: 220%;
+  margin-bottom: -40px
+}
+
+
+.headAccent {
+  color: #FCDBAC;
+  font-size: 290%;
+  background-color: #FAA1A4;
+  padding-right: 40px
+}
+
+nav {
+  background-color: #F2BB58;
+}

@@ -42,9 +42,9 @@ router.post('/', async (req, res, next) => {
     if (imageUrl) newBowie.imageUrl = imageUrl;
     let createdBowie = await Bowie.create(newBowie);
     if (createdBowie) {
-      res.status(204).send(createdBowie)
+      res.status(201).json(createdBowie)
     } else {
-      res.sendStatus(400)
+      res.status(400).send('Ground Control to Major Tom, Your circuit\'s dead, there\'s something wrong')
     }
   } catch(err) {
     next(err)
