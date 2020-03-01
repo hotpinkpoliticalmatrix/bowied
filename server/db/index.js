@@ -8,6 +8,7 @@ Song.belongsTo(Album);
 Album.belongsTo(Bowie);
 Bowie.hasMany(Album);
 Album.hasMany(Song);
+Song.belongsTo(Bowie)
 
 module.exports = {
   db,

@@ -1,6 +1,6 @@
 'use strict'
 
-const { resolve } = require('path')
+const path, { resolve } = require('path')
 
 module.exports = {
   entry: ['babel-polyfill', './app/main'],
@@ -17,11 +17,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /jsx?$/,
-        include: resolve(__dirname, './app'),
-        loader: 'babel-loader'
-      },
-      {
         test: /\.css$/,
         use: [
           'style-loader',
@@ -29,7 +24,12 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /jsx?$/,
+        include: resolve(__dirname, './app'),
+        loader: 'babel-loader'
+      },
+      {
+        test: /\.(png|jpeg|gif)$/,
         use: [
           {
             loader: 'file-loader',

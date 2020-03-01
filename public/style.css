@@ -26,4 +26,59 @@
 
 nav {
   background-color: #F2BB58;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+nav a {
+  float: left;
+  display: block;
+  color: #665857;
+  text-align: center;
+  padding: 15px 40px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+nav a:hover {
+  background-color: #FCDBAC;
+  color: #665857;
+}
+
+.bowiesMapped {
+  display:flex;
+  align-content:center;
+  padding: 40px;
+}
+
+.bowieThumbs {
+  width: 200px;
+  height: 100%;
+  padding: 20px;
+}
+
+.singleContainer {
+  display: flex;
+  background-color: "red";
+}
+
+.titleCol {
+  display: flex;
+  background-color: "blue";
+}
+
+title {
+  color: purple
 }

@@ -1,32 +1,35 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
-import { connect } from 'react-redux'
-import { Home } from './home'
+import React from "react";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { connect } from "react-redux";
+import { Home } from "./home";
+import { SingleBowie } from "./SingleBowie";
+import { AllBowies } from "./AllBowies";
 
 export class Root extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
   render() {
     return (
       <Router>
         <div>
           <nav>
-            Ch-ch-ch-ch-ch-ch-chaaaanges...!
-            <div>
-              <Link to ='/'>Home</Link>
+            <div className="navSelect">
+              <Link to="/">Home</Link>
             </div>
-            <div>
-              <Link to='/bowies'>Bowies</Link>
+            <div className="navSelect">
+              <Link to="/bowies">Bowies</Link>
             </div>
           </nav>
           <Switch>
-            <Route exact path='/' component={Home}/>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/bowies/:id" component={SingleBowie} />
+            <Route exact path="/bowies" component={AllBowies} />
           </Switch>
         </div>
       </Router>
-    )
+    );
   }
 }
 
-export const ReduxRoot = connect(null)(Root)
+export const ReduxRoot = connect(null)(Root);

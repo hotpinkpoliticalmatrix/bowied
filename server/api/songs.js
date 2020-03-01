@@ -4,10 +4,15 @@ const {Song, Album, Bowie} = require('../db')
 router.get('/', async (req, res, next) => {
   try {
     let songs = await Song.findAll({
-      include: [{
-        model: Bowie,
-        model: Album
-      }]
+      include: [
+        {
+          model: Bowie,
+          attributes: [
+            "name",
+            "imageUrl",
+          ]
+        }
+      ]
     });
     if (songs) {
       res.send(songs).status(200)
@@ -22,7 +27,17 @@ router.get('/', async (req, res, next) => {
 
 router.get('/:songId', async (req, res, next) => {
   try {
-    let song = await Song.findByPk(req.params.songId);
+    let song = await Song.findByPk(req.params.songId, {
+      include: [
+        {
+          model: Bowie,
+          attributes: [
+            "name",
+            "imageUrl",
+          ]
+        }
+      ]
+    });
     if (song) {
       res.send(song).status(200)
     } else {
