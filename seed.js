@@ -105,6 +105,7 @@ const albums = {
 
 await Promise.all(songs.map(song => Song.create({
   name: song.name,
+  trackNumber: song.trackNumber,
   audioUrl: song.audioUrl,
   length: song.length,
   genre: song.genre,

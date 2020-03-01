@@ -1,6 +1,6 @@
 import React from "react";
-import { bowies } from "../../public/Assets/different-faces-of-david-bowie.gif";
-import {AllBowies} from './AllBowies'
+import bowies from "../../public/Assets/Images/main.gif";
+import AllBowies from './AllBowies'
 
 export const Home = () => {
   return (
@@ -21,20 +21,3 @@ export const Home = () => {
     </div>
   );
 };
-
-// export class Home extends React.Component {
-//   render() {
-//     return (
-//       <View>
-//         <Image
-//           style={{width: 50, height: 50}}
-//           source={require('@expo/snack-static/react-native-logo.png')}
-//         />
-//         <Image
-//           style={{width: 50, height: 50}}
-//           source={{uri: 'https://facebook.github.io/react/assets/logo_og.png'}}
-//         />
-//       </View>
-//     );
-//   }
-// }

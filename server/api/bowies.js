@@ -8,6 +8,7 @@ router.get("/", async (req, res, next) => {
         {
           model: Album,
           attributes: [
+            "id",
             "name",
             "albumArt",
             "albumUrl",
@@ -39,6 +40,7 @@ router.get("/:bowieId", async (req, res, next) => {
         {
           model: Album,
           attributes: [
+            "id",
             "name",
             "albumArt",
             "albumUrl",

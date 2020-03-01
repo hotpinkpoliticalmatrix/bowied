@@ -1,6 +1,6 @@
 'use strict'
 
-const path, { resolve } = require('path')
+const { resolve } = require('path')
 
 module.exports = {
   entry: ['babel-polyfill', './app/main'],

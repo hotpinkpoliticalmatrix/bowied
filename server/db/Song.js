@@ -9,6 +9,9 @@ const Song = db.define('song', {
       notEmpty: true
     }
   },
+  trackNumber: {
+    type: Sequelize.INTEGER
+  },
   audioUrl: {
     type: Sequelize.TEXT
   },
