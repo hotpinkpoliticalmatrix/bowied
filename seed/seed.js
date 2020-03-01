@@ -1,6 +1,6 @@
 const fs = require("fs");
-const { db, Album, Song, Bowie } = require("./server/db");
-const songs = JSON.parse(fs.readFileSync("songs.json", "utf8"));
+const { db, Album, Song, Bowie } = require("../server/db");
+const songs = JSON.parse(fs.readFileSync(__dirname + "/songs.json", "utf8"));
 
 const seed = async () => {
   await db.sync({ force: true });
