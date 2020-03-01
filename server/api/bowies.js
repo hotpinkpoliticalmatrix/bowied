@@ -7,7 +7,9 @@ router.get("/", async (req, res, next) => {
       include: [
         {
           model: Album,
+          order: [["trackNumber", "DESC"]],
           attributes: [
+            // "id",
             "name",
             "albumArt",
             "albumUrl",
@@ -38,7 +40,9 @@ router.get("/:bowieId", async (req, res, next) => {
       include: [
         {
           model: Album,
+          order: "trackNumber DESC",
           attributes: [
+            // "id",
             "name",
             "albumArt",
             "albumUrl",

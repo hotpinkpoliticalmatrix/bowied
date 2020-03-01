@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchBowie } from "../redux/bowies";
+import { Albums } from './AlbumsByBowie'
 
-export class Bowie extends Component {
+class Bowie extends Component {
   constructor(props) {
     super(props);
   }
@@ -14,20 +15,21 @@ export class Bowie extends Component {
     const [bowie] = this.props.bowie;
     return bowie ? (
       <div key={bowie.id}>
-        <div className="singleContainer">
+        <div className="mainContainer">
           <div className="titleCol">
             <p className="title">{bowie.name}</p>
             <img src={bowie.imageUrl} />
           </div>
           <div className="descripCol">
             <p className="description">{bowie.description}</p>
-            <p className="source">{bowie.source}</p>
+            <a className='source' href={bowie.source}>[[ Read more ]]</a>
           </div>
         </div>
+        <Albums albums={bowie.albums}/>
       </div>
     ) : (
       <div>
-        <p>fetching bowies...</p>
+        <p className='loading'>fetching bowies...</p>
       </div>
     );
   }
