@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const {Album, Song} = require("../db");
+const { Album, Song } = require("../db");
 
 //all albums
 router.get("/", async (req, res, next) => {
@@ -18,7 +18,7 @@ router.get("/", async (req, res, next) => {
             "source",
             "releaseDate",
             "songwriter",
-            "single",
+            "single"
           ]
         }
       ]
@@ -34,12 +34,13 @@ router.get("/", async (req, res, next) => {
 });
 
 //album by bowie
-router.get('/:albumId/', async (req, res, next) => {
+router.get("/:albumId/", async (req, res, next) => {
   try {
     let album = await Album.findAll({
       include: [
         {
           model: Song,
+          order: "trackNumber DESC",
           attributes: [
             "id",
             "name",
@@ -51,12 +52,13 @@ router.get('/:albumId/', async (req, res, next) => {
             "source",
             "releaseDate",
             "songwriter",
-            "single",
+            "single"
           ]
+
         }
       ],
       where: {
-        albumId: req.params.albumId
+        id: req.params.albumId
       }
     });
     if (album) {
@@ -69,7 +71,7 @@ router.get('/:albumId/', async (req, res, next) => {
   }
 });
 
-router.get('/single/:albumId', async (req, res, next) => {
+router.get("/single/:albumId", async (req, res, next) => {
   try {
     let album = await Album.findByPk(req.params.albumId, {
       include: [
@@ -86,11 +88,9 @@ router.get('/single/:albumId', async (req, res, next) => {
             "source",
             "releaseDate",
             "songwriter",
-            "single",
+            "single"
           ],
-          order: [
-
-          ]
+          order: ["trackNumber", "DESC"]
         }
       ]
     });
@@ -103,7 +103,5 @@ router.get('/single/:albumId', async (req, res, next) => {
     next(err);
   }
 });
-
-
 
 module.exports = router;
