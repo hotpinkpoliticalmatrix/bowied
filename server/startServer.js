@@ -1,5 +1,5 @@
-const {db} = require('./server/db')
-const app = require('./server')
+const { db } = require('./db')
+const app = require('.')
 const PORT = 5500
 
 db.sync() // if you update your db schemas, make sure you drop the tables first and then recreate them

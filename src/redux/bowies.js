@@ -49,7 +49,7 @@ export function fetchBowie(id) {
         console.log(`Bowie not found!`)
       }
     } catch(err) {
-      console.log(error)
+      console.log(err)
     }
   }
 }

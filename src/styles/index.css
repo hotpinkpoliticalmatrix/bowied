@@ -71,12 +71,12 @@ nav a:hover {
 
 .singleContainer {
   display: flex;
-  background-color: "red";
+  background-color: red;
 }
 
 .titleCol {
   display: flex;
-  background-color: "blue";
+  background-color: blue;
 }
 
 title {
