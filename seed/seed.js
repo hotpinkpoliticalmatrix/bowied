@@ -13,7 +13,7 @@ const ziggy = await Bowie.create({
   source:
     "https://www.rollingstone.com/music/music-news/ziggy-stardust-how-bowie-created-the-alter-ego-that-changed-rock-55254/",
   imageUrl:
-    "https://classicalbumsundays.com/wp-content/uploads/2011/05/bowie.jpg"
+    "https://i.ibb.co/KDp4Xmn/Ziggy-Stardust.jpg"
 }, {
   include: [{
   model: Album,
@@ -26,7 +26,7 @@ const plasticSoul = await Bowie.create({
   source:
     "https://www.independent.co.uk/arts-entertainment/music/features/david-bowie-young-americans-album-anniversary-bruce-springsteen-ziggy-stardust-a9330526.html",
   imageUrl:
-    "https://i.pinimg.com/564x/26/a1/d1/26a1d199ba1cfba20d4a2465a835f553.jpg"
+    "https://i.ibb.co/vHTSmrZ/young-americans.png"
 }, {
   include: [{
   model: Album,
@@ -39,7 +39,7 @@ const thinWhiteDuke = await Bowie.create({
   source:
     "https://timeline.com/the-cocaine-fueled-fascist-who-almost-destroyed-david-bowie-46bf936e3035",
   imageUrl:
-    "https://api.time.com/wp-content/uploads/2016/12/david-bowie-station-to-station-thin-white-duke-3-8-1_26.jpg?quality=85&w=1616"
+    "https://i.ibb.co/bbJDD4p/Thin-White-Duke.png"
 }, {
   include: [{
   model: Album,

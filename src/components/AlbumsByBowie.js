@@ -4,6 +4,7 @@ export const Albums = props => {
   console.log(props);
   return (
     <div className="albumsMapped">
+      <p className='title'>Albums</p>
       {props.albums.map((album) => {
         return (
         <div key={album.name}>

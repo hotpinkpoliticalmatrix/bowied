@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchBowie } from "../redux/bowies";
-import { Albums } from './AlbumsByBowie'
+import { Albums } from "./AlbumsByBowie";
 
 class Bowie extends Component {
   constructor(props) {
@@ -16,20 +16,25 @@ class Bowie extends Component {
     return bowie ? (
       <div key={bowie.id}>
         <div className="mainContainer">
-          <div className="titleCol">
-            <p className="title">{bowie.name}</p>
-            <img src={bowie.imageUrl} />
+          <div className="topContainer">
+            <div className="titleCol">
+              <p className="title">{bowie.name}</p>
+              <img className="imageLarge" src={bowie.imageUrl} />
+            </div>
+            <div className="descripCol">
+              <p className="description">
+                {bowie.description} <a href={bowie.source}>[[ Read more ]]</a>
+              </p>
+            </div>
           </div>
-          <div className="descripCol">
-            <p className="description">{bowie.description}</p>
-            <a className='source' href={bowie.source}>[[ Read more ]]</a>
+          <div className="albumContainer">
+            <Albums albums={bowie.albums} />
           </div>
         </div>
-        <Albums albums={bowie.albums}/>
       </div>
     ) : (
       <div>
-        <p className='loading'>fetching bowies...</p>
+        <p className="loading">fetching bowies...</p>
       </div>
     );
   }

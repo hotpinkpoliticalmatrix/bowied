@@ -17,7 +17,7 @@ class AllBowies extends Component {
           return (
             <div key={bowie.id}>
               <a href={'/bowies/' + bowie.id}><img className="bowieThumbs" src={bowie.imageUrl} /></a>
-              <a href={'/bowies/' + bowie.id}><h2>{bowie.name}</h2></a>
+              <a href={'/bowies/' + bowie.id}><p className='subHeader'>{bowie.name}</p></a>
             </div>
           );
         })}

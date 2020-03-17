@@ -1,6 +1,6 @@
 import React from "react";
-import bowies from "../assets/changes.gif";
-import {AllBowies} from './AllBowies'
+import bowies from "../assets/images/changes.gif";
+import AllBowies from './AllBowies'
 
 export const Home = () => {
   return (
@@ -10,7 +10,7 @@ export const Home = () => {
           so I turn myself to<div className="headAccent">FACE ME</div>
         </div>
         <img
-          className="bowiegif" 
+          className="bowiegif"
           src={bowies}
           alt="changes"
         />

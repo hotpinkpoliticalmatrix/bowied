@@ -4,6 +4,10 @@
   align-items: center;
 }
 
+img {
+  object-fit: cover;
+}
+
 .webHead {
   font-family: monospace;
   font-stretch: 50;
@@ -59,14 +63,23 @@ nav a:hover {
 
 .bowiesMapped {
   display:flex;
-  align-content:center;
+  justify-content: center;
   padding: 40px;
+  flex-wrap: wrap;
+}
+
+.subHeader {
+  text-align: center;
+  font-weight: bold
 }
 
 .bowieThumbs {
   width: 200px;
-  height: 100%;
-  padding: 20px;
+  height: 200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+
 }
 
 .singleContainer {
@@ -74,11 +87,43 @@ nav a:hover {
   background-color: red;
 }
 
-.titleCol {
+.topContainer {
   display: flex;
-  background-color: blue;
+  padding: 50px;
+  align-items: center;
+}
+
+.titleCol {
+  flex-grow: 0;
+}
+
+.descripCol {
+  flex-grow: 5
 }
 
 .loading {
   text-align: center;
+}
+
+.bowiegif {
+  width: 400px;
+  height: 400px
+}
+
+.imageLarge {
+  width: 400px;
+  height: 400px;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 40px;
+  text-align: center;
+}
+.description {
+  padding: 40px
 }
